@@ -1,7 +1,7 @@
 # TMenu
 Repository of TMenu
 # Visão Geral
- - Documento de requisitos da TMenu, plataforma de Menu e comanda digital para bares e restaurantes. O TMenu deve proporcionar ao cliente a liberdade de acessar o menu(cardápio) de bares e restaurantes por meio de seu smatphone, capturando com sua camera o qrcode da plataforma disponibilizado nas mesas. Ao visualizar o menu, o cliente pode fazer seus pedidos diretamente do site que encaminha o pedido para o setor responsável do estabelecimento. Para realizar um pedido é necessário que o cliente informe seu nome e CPF.
+ - Documento de requisitos da TMenu, plataforma de Menu e comanda digital para bares e restaurantes. O TMenu deve proporcionar ao cliente a liberdade de acessar o menu(cardápio) de bares e restaurantes por meio de seu smatphone, capturando com sua camera o qrcode da plataforma disponibilizado nas mesas. Ao visualizar o menu, o cliente pode fazer seus pedidos diretamente do site que encaminha o pedido para o setor responsável do estabelecimento. Para realizar um pedido é necessário que o cliente informe seu nome, CPF e telefone.
 
 # Atores
  - Cliente do estabelecimento
@@ -47,6 +47,3 @@ Repository of TMenu
 - TMenu Administrador
     - Exibir histórico de vendas de cada estabelecimento
     - Fechar fatura de cliente(Estabelecimento)
-    
-
-
