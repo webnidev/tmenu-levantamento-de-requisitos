@@ -1,5 +1,5 @@
-# tmenu
-Repository of tmenu
+# TMenu
+Repository of TMenu
 
 # Requisitos
  - Cliente do estabelecimento
@@ -12,10 +12,11 @@ Repository of tmenu
     - 
 
  - Estabelimento cliente do TMenu
+
     Vendas
-    - Receber os pedidos por cliente ou por mesa
+    - Receber os pedidos de cada mesa
     - 
-    - Direcionar cada pedido para a impressora correspondente
+    - 
 
     Administração
     - Fazer cadastro e login na plataforma
@@ -29,11 +30,14 @@ Repository of tmenu
     - 
 
 - TMenu
-    - Direcionar pedidos para a impressora correspondente à categoria de produto ou caixa
+    - Gerar PDFs pra serem impressos
+    - Direcionar pedidos para a impressora correspondente à categoria de produto ou para o caixa
+    - Armazenar histórico de vendas do estabelecimento
 
 
 - TMenu Administrador
+    - Exibir histórico de vendas de cada estabelecimento
     - Fechar fatura de cliente(Estabelecimento)
-    - 
+    
 
 
