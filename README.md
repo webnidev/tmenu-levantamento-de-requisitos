@@ -48,3 +48,5 @@ Repositório para o levantamento de informações dos requisitos iniciais da pri
 - TMenu Administrador
     - Exibir histórico de vendas de cada estabelecimento
     - Fechar fatura de cliente(Estabelecimento)
+
+Em breve, mais atualizações...
