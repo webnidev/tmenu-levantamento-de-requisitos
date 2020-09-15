@@ -55,4 +55,4 @@ Em breve, mais atualizações...
 
 # Modelo Entidade Relacionamento
 
-<img src="modelo.png" alt="" width=450 height=600>
+<img src="modelo.png" alt="" width=900 height=800>
