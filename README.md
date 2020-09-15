@@ -50,3 +50,9 @@ Repositório para o levantamento de informações dos requisitos iniciais da pri
     - Fechar fatura de cliente(Estabelecimento)
 
 Em breve, mais atualizações...
+
+
+
+# Modelo Entidade Relacionamento
+
+![Modelo Entidade Relacionamento](https://github.com/webnidev/tmenu-levantamento-de-requisitos/modelo.png?raw=true)
