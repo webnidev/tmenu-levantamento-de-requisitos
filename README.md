@@ -1,10 +1,18 @@
 # TMenu
 Repositório para o levantamento de informações dos requisitos iniciais da primeira versão do Tmenu.
 
-# Visão Geral
- - Documento de requisitos da TMenu, plataforma de Menu e comanda digital para bares e restaurantes. O TMenu deve proporcionar ao cliente a liberdade de acessar o menu(cardápio) de bares e restaurantes por meio de seu smatphone, capturando com sua camera o qrcode da plataforma disponibilizado nas mesas. Ao visualizar o menu, o cliente pode fazer seus pedidos diretamente do site que encaminha o pedido para o setor responsável do estabelecimento. Para realizar um pedido é necessário que o cliente informe seu nome, CPF e telefone.
+# O que é?
+ - Documento de requisitos da TMenu, plataforma de cardápio e comanda digital para bares e restaurantes.
 
-# Atores
+# Objetivos
+- Proporcionar ao cliente a liberdade de acessar o menu(cardápio) de bares e restaurantes por meio de seu smartphone, capturando com sua câmera o qrcode da plataforma disponibilizado nas mesas. Também ajudará os estabelecimentos a reduzir custos operacionais e otimizar o atendimento aos clientes. 
+
+# Tipos de aplicações
+1 - Painel Administrativo para a equipe tmenu (aplicação web com foco na navegação desktop)
+2 - Painel Administrativo para os estabelecimentos (aplicação web com foco na nevegação desktop)
+3 - Cardápio Digital para os clientes dos estabelecimentos (aplicação web com foco na navegação mobile)
+
+
  - Cliente do estabelecimento
  - Estabelecimento
     - Módulo de vendas
