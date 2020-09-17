@@ -16,11 +16,11 @@ Repositório para o levantamento de informações dos requisitos iniciais da pri
  - Cliente do estabelecimento
     - Conectar à rede WIFI do estabelecimento com qrcode
     - Ter acesso ao menu e as opções do sistema a partir do escaneamento do qrcode
-    - Se identificar com cpf 
+    - O cliente deve se cadastrar no TMenu tendo opções de criação de suas credenciais por meio de APIs de login de redes sociais.
+    - O cliente deve cadastrar cpf, nome e telefone
     - Fazer pedidos pelo sistema
-    - Ver o valor da conta quando desejar
+    - Ver o detalhamento do pedido quando desejar
     - Pedir a conta pelo sistema
-    - 
 
  - Estabelimento cliente do TMenu
 
@@ -78,9 +78,18 @@ Em breve, mais atualizações...
 
     - RF07 O estabelecimento deve poder gerar relatórios de operações realizadas na plaforma com filtros que mostrem a movimentação por periodo, por mesa e por cliente.
     
-    - RF06 O estabelecimento deve poder cadastrar mesas, que terão uma numeração especifica e um link de acesso ao menu. Cada mesa pode ou não se relacionar com um funcionário (garçons). Em cada mesa pode ser realizado um ou mais pedidos simultâneos. 
 
 - Requisistos Funcionais Cliente do estabelecimento
+
+    - RF08 O cliente deve poder acessar o menu do estabelecimento por meio do escanemento de qrcode previamente criado a partir da url da respectiva mesa do estabelecimento.
+
+    - RF09 O cliente deve poder se cadastrar no TMenu por meio de API de login das redes mais utilizadas.
+
+    - RF10 O cliente deve poder adicionar a seu cadastro, seu nome, cpf e tefone, antes de efetuar seu primeiro pedido.
+    
+    - RF11 O cliente deve poder adicionar itens à sua sacola de forma a permitir que realize um pedido com os itens escolidos.
+
+    - RF12 O cliente deve poder finalizar seu pedido, solicitando o fechamento da conta de forma automática, sendo informado que o funcinário do estabelecimento trará a conta para o seu pagamento.
 
 
 - Requisistos Funcionais Administração
