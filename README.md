@@ -57,9 +57,9 @@ Em breve, mais atualizações...
 
 <img src="model_latest.png" alt="" width=1024 height=675>
 
-<h2>Definições de Requisitos</h2>
-<h3>Requisistos Funcionais</h3>
-- Estabelecimento
+# Definições de Requisitos
+
+- Requisistos Funcionais Estabelecimento
     
     - RF01 Fazer cadastro na plataforma.
     O estabelecimento deverá poder fazer seu cadastro na plataforma TMenu, informando seus dados:
@@ -72,6 +72,18 @@ Em breve, mais atualizações...
     
     - RF04 O estabelecimento deve poder cadastrar categorias de produtos de acordo com seu negócio assim como editar e excluí-las conforme sua necessidade.
     
-    - RF05 O estabelecimento deve poder cadastrar produtos de acordo com seu modelo de negócio podendo editar e excluir conforme sua necessidade, aos produtos deve ser possível atribuir categorias, atributos, variações e criar combos com dois ou mais produtos distintos, assim como com suas possíveis variações.
+    - RF05 O estabelecimento deve poder cadastrar produtos de acordo com seu modelo de negócio podendo editar e excluir conforme sua necessidade, aos produtos deve ser possível atribuir categorias, atributos e criar combos com dois ou mais produtos distintos, assim como com suas possíveis variações.
     
     - RF06 O estabelecimento deve poder cadastrar mesas, que terão uma numeração especifica e um link de acesso ao menu. Cada mesa pode ou não se relacionar com um funcionário (garçons). Em cada mesa pode ser realizado um ou mais pedidos simultâneos. 
+
+    - RF07 O estabelecimento deve poder gerar relatórios de operações realizadas na plaforma com filtros que mostrem a movimentação por periodo, por mesa e por cliente.
+    
+    - RF06 O estabelecimento deve poder cadastrar mesas, que terão uma numeração especifica e um link de acesso ao menu. Cada mesa pode ou não se relacionar com um funcionário (garçons). Em cada mesa pode ser realizado um ou mais pedidos simultâneos. 
+
+- Requisistos Funcionais Cliente do estabelecimento
+
+
+- Requisistos Funcionais Administração
+
+   
+
