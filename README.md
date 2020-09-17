@@ -8,16 +8,9 @@ Repositório para o levantamento de informações dos requisitos iniciais da pri
 - Proporcionar ao cliente a liberdade de acessar o menu(cardápio) de bares e restaurantes por meio de seu smartphone, capturando com sua câmera o qrcode da plataforma disponibilizado nas mesas. Também ajudará os estabelecimentos a reduzir custos operacionais e otimizar o atendimento aos clientes. 
 
 # Tipos de aplicações
-1 - Painel Administrativo para a equipe tmenu (aplicação web com foco na navegação desktop)
-2 - Painel Administrativo para os estabelecimentos (aplicação web com foco na nevegação desktop)
-3 - Cardápio Digital para os clientes dos estabelecimentos (aplicação web com foco na navegação mobile)
-
-
- - Cliente do estabelecimento
- - Estabelecimento
-    - Módulo de vendas
-    - Módulo administrativo
- - Sistema
+- Painel Administrativo para a equipe tmenu (aplicação web com foco na navegação desktop)
+- Painel Administrativo para os estabelecimentos (aplicação web com foco na nevegação desktop)
+- Cardápio Digital para os clientes dos estabelecimentos (aplicação web com foco na navegação mobile)
 
 # Requisitos
  - Cliente do estabelecimento
