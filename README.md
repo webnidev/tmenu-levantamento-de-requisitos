@@ -55,7 +55,7 @@ Em breve, mais atualizações...
 
 # Modelo Entidade Relacionamento
 
-<img src="model_latest.png" alt="" width=1024 height=675>
+<img src="model.png" alt="" width=1024 height=675>
 
 # Definições de Requisitos
 
