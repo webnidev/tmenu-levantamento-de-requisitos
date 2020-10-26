@@ -1,0 +1,479 @@
+{
+	"info": {
+		"_postman_id": "0067fedf-8bad-4184-95b1-114ec2f0bcdf",
+		"name": "Doc API - TMenu",
+		"description": "Docuementação para utilizção da API do Tmenu.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"cicero@tmenu.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/v1.0/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"v1.0",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Request de login, necessita dos campos email e senha utilizando o metodo POST, quando bem sucedido retorna um token e um refrsh token para autenticação no sistema, ccom status code 200, caso contrario responde com um status code 401 Unauthorized. \r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Maria Clara\",\r\n    \"cpf\":\"15836978925\",\r\n    \"phone\":\"12586429756\",\r\n    \"email\":\"clara@tmenu.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/v1.0/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"v1.0",
+								"auth",
+								"register"
+							]
+						},
+						"description": "Request com metodo POST e os campos obirgatórios, usename, cpf, phone, email e password. Se bem sucedida responde com um status code 201 e o usuário criado. Caso contrario retorna um status code 400. "
+					},
+					"response": []
+				}
+			],
+			"description": "Representação de requisições de autenticação e registro de usuárioas na API TMenu;\r\nAs operações de registro e login não necessitam de autenticação ",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Menu",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/v1.0/DCFNOT6GE7GBX7P5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"v1.0",
+								"DCFNOT6GE7GBX7P5"
+							]
+						},
+						"description": "Lista todas as categorias de produtos de um restaurante de, acordo com a URL apontada pelo QRCODE, assim como os respectivos produtos de cada categoria, ordenados por número de vendas. A URL é composta pelo código da mesa que é unico no sistema e vai direcionar para a mesa de um termindao estabelecimento. Em caso de sucesso a requisição retorna um status code 200 e a lista de categorias e produtos."
+					},
+					"response": []
+				},
+				{
+					"name": "Show - Product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/v1.0/client/product/75",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"v1.0",
+								"client",
+								"product",
+								"75"
+							]
+						},
+						"description": "Exibe as informações de um produto de acordo com o ID informado na URL.\r\nO produto possui atributos que podem ser obrigatorios, (com por exemplo as parte de uma pizza de dois sabores que terá dois atributos obrigatórios que serão dois sabores)\r\nOs atributos não obrigatórios são listados juntos com o produto. Cada atributo possui um nome, um limite máximo e uma lista de valores. Cada valor de um atributo possui sua descrição, um valor adicional que incrementa o preço do produto e um numero máximo de itens que podem ser adicionados ao produto.\r\nOs limites de itens sequem a hierarquia de cima para baixo, onde os limites dos valores podem ser maiores que os limites dos atributos, mas não podem ultrapassá-los (Uma pizza tem um atributo que permite 3 valores e cada valor permite ate 5 itens mas o limite do atributo só permitira 3).\r\nO produto possui uma lista de imagens que podem ser exibidas."
+					},
+					"response": []
+				}
+			],
+			"description": "Represtação das operações do cliente de estabelecimentos na API, as operações necessitam de autenticação exceto a visualização de cardápio e produto.",
+			"auth": {
+				"type": "bearer"
+			},
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjcsImlhdCI6MTYwMjc4OTA3NH0.eBRgJSjBixI76m_24vFZN_Swsvqy0PG-AfKg4qz7pTw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/v1.0/manager/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"v1.0",
+										"manager",
+										"product"
+									]
+								},
+								"description": "Lista todos os productos cadastrados no estabelecimento. É necessário esta autenticado como Manager (Gerente do estabelecimento)"
+							},
+							"response": []
+						},
+						{
+							"name": "Show",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjcsImlhdCI6MTYwMjc4OTA3NH0.eBRgJSjBixI76m_24vFZN_Swsvqy0PG-AfKg4qz7pTw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/v1.0/manager/product/75",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"v1.0",
+										"manager",
+										"product",
+										"75"
+									]
+								},
+								"description": "Exibe detalhes de um produto de acordo com seu ID."
+							},
+							"response": []
+						}
+					],
+					"description": "Operações realizadas pelo Manager (Gerente do estabelecimento) para gerenciar produtos.",
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjcsImlhdCI6MTYwMjc4OTA3NH0.eBRgJSjBixI76m_24vFZN_Swsvqy0PG-AfKg4qz7pTw",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9283b3e6-13ae-4382-b00e-ae62df9e59a3",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "f13c2769-ae26-4e2c-838e-befade60c3cc",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Attributes",
+					"item": [],
+					"description": "Operações realizadas pelo Manager (Gerente do estabelecimento) para gerenciar atributos de produtos.",
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjcsImlhdCI6MTYwMjc4OTA3NH0.eBRgJSjBixI76m_24vFZN_Swsvqy0PG-AfKg4qz7pTw",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9c7c1ce1-4d04-4585-b329-bda8a22fb9af",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a47c0ca-5079-4541-bc1f-4a7d2ab00315",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Value Attribute",
+					"item": [],
+					"description": "Operações do Manager (Gerente do estabelecimento) com relação aos valores de atributos dos produtos.",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "edee0df2-79fc-41b8-88ec-944910dbb7da",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "7fa8ab4c-03bb-43bc-962e-0587b26ea34c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Category",
+					"item": [],
+					"description": "Operações realizadas pelo Manager (Gerente do estabelecimento) para gerenciar as categorias de produtos.",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "27fd41f2-4084-462e-9d8e-2c626e6439a5",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "45e200ec-8c48-4b7b-8213-cd22fd17dcb0",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"description": "Represtação das operacções do gerente de estabelecimento, todas as requisições necessitam autenticação.",
+			"auth": {
+				"type": "bearer"
+			},
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin - User",
+					"item": [
+						{
+							"name": "Admin - users",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjYsImlhdCI6MTYwMzcxNzA5MX0.1SILgNyDJ2pqlEeTQk5zFd48RdlGAwH4Msr2DVtJ0-0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"cicero@tmenu.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3333/v1.0/admin/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"v1.0",
+										"admin",
+										"user"
+									]
+								},
+								"description": "Lista todos os usuários do sistema, é necessário estar autenticado com usuário administrador."
+							},
+							"response": []
+						}
+					],
+					"description": "Operações do usuário administrador do sistema com relação a todos os usuários",
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjcsImlhdCI6MTYwMjc4OTA3NH0.eBRgJSjBixI76m_24vFZN_Swsvqy0PG-AfKg4qz7pTw",
+								"type": "string"
+							}
+						]
+					},
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Admin - Establishment",
+					"item": [
+						{
+							"name": "Admin - establishment",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjYsImlhdCI6MTYwMzcxNzA5MX0.1SILgNyDJ2pqlEeTQk5zFd48RdlGAwH4Msr2DVtJ0-0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"cicero@tmenu.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3333/v1.0/admin/establishment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"v1.0",
+										"admin",
+										"establishment"
+									]
+								},
+								"description": "Lista todos os estabelecimentos cadastrados em um JSON com as informações do estabelecimento e suas respectivas mesas."
+							},
+							"response": []
+						}
+					],
+					"description": "Operações do usuário administrador com relação aos estabelecimentos",
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"description": "Representação das operações realizadas pelo administrador do sistema TMenu. Todas as requisições necessitam de autenticação. ",
+			"auth": {
+				"type": "bearer"
+			},
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"protocolProfileBehavior": {}
+}
